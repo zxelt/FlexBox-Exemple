@@ -1,0 +1,97 @@
+<!-- BASED ON https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html -->
+<!-- BY https://github.com/zxelt-->
+    <style>
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      p{
+        color: white;
+      }
+      a{
+        color: white;
+      }
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: rgb(46, 46, 46);
+        height: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      section{
+        display: flex;
+        width: 100%;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: rgb(46, 46, 46);
+        border-radius: 10px;
+      }
+
+      .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      h2{
+        color: white;
+      }
+      .closebtn:hover {
+        color: rgb(214, 0, 0);
+      }
+    </style>
+    <header>
+      <h1>Flexbox Exemple</h1>
+    </header>
+
+    <section>
+        <article>
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <h2>First article</h2>
+
+        <p>Tentée par l'occasion, ceux de sa famille se partagent le monde ; mais n'apercevant rien, j'eusse pu voir avec indifférence cet écho de la voix et interpellant le buraliste de la poste. Lève-toi, dit-il, votre affaire s'est bien amusée à balancer de droite et de gauche. Dépourvue comme elle l'appelle toujours mon compère, aussi bien l'affaire. Comparé à ces hommes iniques sur leur barbarie, à l'enseigne des classes dirigeantes ; et, entre autres en confondant les idées de tout repos, sans recevoir de réponse à tout. Enterre-la les pieds tournés vers le même temps.</p>
+      </article>
+        
+      <article>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <h2>Second article</h2>
+
+        <p>Tentée par l'occasion, ceux de sa famille se partagent le monde ; mais n'apercevant rien, j'eusse pu voir avec indifférence cet écho de la voix et interpellant le buraliste de la poste. Lève-toi, dit-il, votre affaire s'est bien amusée à balancer de droite et de gauche. Dépourvue comme elle l'appelle toujours mon compère, aussi bien l'affaire. Comparé à ces hommes iniques sur leur barbarie, à l'enseigne des classes dirigeantes ; et, entre autres en confondant les idées de tout repos, sans recevoir de réponse à tout. Enterre-la les pieds tournés vers le même temps.</p>
+      </article>
+      <article>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <h2>Third article</h2>
+
+        <p>Tentée par l'occasion, ceux de sa famille se partagent le monde ; mais n'apercevant rien, j'eusse pu voir avec indifférence cet écho de la voix et interpellant le buraliste de la poste. Lève-toi, dit-il, votre affaire s'est bien amusée à balancer de droite et de gauche. Dépourvue comme elle l'appelle toujours mon compère, aussi bien l'affaire. Comparé à ces hommes iniques sur leur barbarie, à l'enseigne des classes dirigeantes ; et, entre autres en confondant les idées de tout repos, sans recevoir de réponse à tout. Enterre-la les pieds tournés vers le même temps.</p>
+
+        <p>Put a start in my <a href="https://github.com/zxelt">Github :)</a></p>
+      </article>
+    </section>
+    <script>
+      // Script by https://www.w3schools.com/
+      var close = document.getElementsByClassName("closebtn");
+      var i;
+           for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+          var div = this.parentElement;
+          div.style.opacity = "0";
+          setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+      }
+      </script>
